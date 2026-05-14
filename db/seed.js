@@ -1,6 +1,7 @@
 import db from "#db/client";
 
 import { createTool } from "#db/queries/tools";
+import { createUser } from "#db/queries/users";
 
 await db.connect();
 await seed();
@@ -12,4 +13,6 @@ async function seed() {
   await createTool("RBT", "2122PB", 312, "CCR", 12, 350, 120);
   await createTool("MVT", "4253XA", 310, "MVT", 8, 180, 45);
   await createTool("ZDL", "4223XB", 228, "PRB", 10, 400, 150);
+
+  await createUser("user1", "password");
 }

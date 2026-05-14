@@ -3,9 +3,23 @@ const app = express();
 export default app;
 import cors from "cors";
 
+import getUserFromToken from "#middleware/getUserFromToken";
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(getUserFromToken);
+
+import usersRouter from "#api/users";
+import toolsRouter from "#api/tools";
+
+app.get("/", (req, res) => {
+  res.send("Faker Blues O-ring Book");
+});
+
+app.use("/tools", toolsRouter);
+app.use("/users", usersRouter);
 
 app.use((err, req, res, next) => {
   switch (err.code) {

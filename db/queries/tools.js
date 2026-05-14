@@ -39,3 +39,14 @@ export async function getTools() {
   const { rows: tools } = await db.query(sql);
   return tools;
 }
+
+export async function getToolById(id) {
+  const sql = `
+  SELECT * FROM tools
+  WHERE id = $1
+  `;
+  const {
+    rows: [tool],
+  } = await db.query(sql, [id]);
+  return tool;
+}
