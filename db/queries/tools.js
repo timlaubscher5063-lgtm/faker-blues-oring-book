@@ -33,7 +33,7 @@ export async function createTool(
 
 export async function getTools() {
   const sql = `
-    SELECT name FROM tools;
+    SELECT * FROM tools;
     `;
 
   const { rows: tools } = await db.query(sql);
