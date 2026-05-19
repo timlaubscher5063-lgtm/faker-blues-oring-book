@@ -1,0 +1,58 @@
+#tools {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+}
+
+tr.tool {
+  display: grid;
+  grid-template-columns: 10ch 1fr;
+  gap: 1ch;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+li.tool .name {
+  font-weight: bold;
+}
+
+#tool {
+  display: table;
+  gap: 10ch;
+  text-align: left;
+}
+
+#tool figure {
+  max-height: 50vh;
+}
+
+#tool section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+#toolAdd {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+}
+
+@media (width >= 450px) {
+  #tool {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #tool figure {
+    align-items: start;
+  }
+}
+
+form#search {
+  grid-template-columns: 1fr 10ch;
+  margin-bottom: 0.25rem;
+}
+
+form#search label {
+  grid-template-columns: auto 1fr;
+}
