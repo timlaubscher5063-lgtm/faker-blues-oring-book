@@ -18,18 +18,9 @@ li.tool .name {
 
 #tool {
   display: table;
-  gap: 10ch;
+  gap: 15ch;
   text-align: left;
-}
-
-#tool figure {
-  max-height: 50vh;
-}
-
-#tool section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100rem;
 }
 
 #toolAdd {
