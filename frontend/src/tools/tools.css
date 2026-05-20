@@ -38,6 +38,10 @@ li.tool .name {
   gap: 1ch;
 }
 
+.th {
+  width: 15ch;
+}
+
 @media (width >= 450px) {
   #tool {
     grid-template-columns: 1fr 2fr;

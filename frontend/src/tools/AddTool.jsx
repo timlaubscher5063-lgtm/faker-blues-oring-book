@@ -3,7 +3,7 @@ import { addTool } from "../api/tools";
 import { useAuth } from "../auth/AuthContext";
 import "./tools.css";
 
-export default function AddTool({ syncTools }) {
+export default function AddTool() {
   const { token } = useAuth();
 
   const [error, setError] = useState(null);
@@ -29,7 +29,7 @@ export default function AddTool({ syncTools }) {
         weight,
         voltage,
       });
-      syncActivities();
+      // syncTools();
     } catch (e) {
       setError(e.message);
     }

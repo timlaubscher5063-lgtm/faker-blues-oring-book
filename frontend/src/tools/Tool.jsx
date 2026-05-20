@@ -35,6 +35,7 @@ export default function Tool() {
             <th>Weight</th>
             <th>Voltage</th>
           </tr>
+
           <tr>
             <td>{tool.name}</td>
             <td>{tool.oring}</td>
