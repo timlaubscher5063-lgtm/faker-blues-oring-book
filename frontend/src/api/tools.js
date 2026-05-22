@@ -62,3 +62,23 @@ export async function addTool(
     throw Error(result.message);
   }
 }
+
+export async function deleteTool(token, id) {
+  if (!token) {
+    throw Error("You must be signed in to delete a tool.");
+  }
+
+  const response = await fetch(API + "/tools/" + id, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+    //body: JSON.stringify(id),
+  });
+
+  if (!response.ok) {
+    const result = await response.json();
+    throw Error(result.message);
+  }
+}

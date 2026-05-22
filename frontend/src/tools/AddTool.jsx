@@ -29,7 +29,6 @@ export default function AddTool() {
         weight,
         voltage,
       });
-      // syncTools();
     } catch (e) {
       setError(e.message);
     }

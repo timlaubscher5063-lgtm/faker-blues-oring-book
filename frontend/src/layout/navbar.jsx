@@ -15,9 +15,9 @@ export default function Navbar() {
           <>
             <NavLink to="/tools">Tools</NavLink>
             <NavLink to="/tools/add">Add Tool</NavLink>
-            <a href="#" onClick={() => logout()}>
+            <NavLink to="/login" onClick={() => logout()}>
               Log out
-            </a>
+            </NavLink>
           </>
         ) : (
           <>
