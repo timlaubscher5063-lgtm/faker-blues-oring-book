@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials),
     });
-    // const result = await response.json();
+
     if (!response.ok) throw result;
     const token = await response.text();
     localStorage.setItem("token", token);

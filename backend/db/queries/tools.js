@@ -50,3 +50,12 @@ export async function getToolById(id) {
   } = await db.query(sql, [id]);
   return tool;
 }
+
+export async function deleteTool(id) {
+  console.log("ID", id);
+  const sql = `DELETE FROM tools WHERE id=$1 RETURNING *`;
+  const {
+    rows: [tool],
+  } = await db.query(sql, [id]);
+  return tool;
+}

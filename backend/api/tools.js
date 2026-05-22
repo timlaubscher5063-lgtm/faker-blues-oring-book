@@ -2,7 +2,12 @@ import express from "express";
 const router = express.Router();
 export default router;
 
-import { getTools, getToolById, createTool } from "#db/queries/tools";
+import {
+  getTools,
+  getToolById,
+  createTool,
+  deleteTool,
+} from "#db/queries/tools";
 
 import requireUser from "#middleware/requireUser";
 import requireBody from "#middleware/requireBody";
@@ -47,9 +52,16 @@ router.param("id", async (req, res, next, id) => {
   const tool = await getToolById(id);
   if (!tool) return res.status(404).send("Tool not found.");
   req.tool = tool;
+  console.log(req.tool);
   next();
 });
 
 router.get("/:id", (req, res) => {
   res.send(req.tool);
+});
+
+router.delete("/:id", async (req, res) => {
+  const toolToDelete = await deleteTool(req.tool.id);
+  if (!toolToDelete) return res.status(404).send("Tool does not exist");
+  res.sendStatus(204);
 });
