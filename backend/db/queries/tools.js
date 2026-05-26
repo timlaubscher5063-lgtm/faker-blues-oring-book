@@ -52,7 +52,6 @@ export async function getToolById(id) {
 }
 
 export async function deleteTool(id) {
-  console.log("ID", id);
   const sql = `DELETE FROM tools WHERE id=$1 RETURNING *`;
   const {
     rows: [tool],
