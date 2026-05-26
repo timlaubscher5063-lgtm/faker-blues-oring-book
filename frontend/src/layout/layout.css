@@ -18,10 +18,17 @@
   gap: 1ch;
   align-items: center;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
 }
 
 #navbar #brand img {
   height: 6rem;
+}
+
+#link {
+  text-decoration: none;
 }
 
 @media (width <= 400px) {

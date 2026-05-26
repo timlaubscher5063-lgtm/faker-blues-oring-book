@@ -13,15 +13,21 @@ export default function Navbar() {
       <nav>
         {token ? (
           <>
-            <NavLink to="/tools">Tools</NavLink>
-            <NavLink to="/tools/add">Add Tool</NavLink>
-            <NavLink to="/login" onClick={() => logout()}>
+            <NavLink id="link" to="/tools">
+              Tools
+            </NavLink>
+            <NavLink id="link" to="/tools/add">
+              Add Tool
+            </NavLink>
+            <NavLink id="link" to="/login" onClick={() => logout()}>
               Log out
             </NavLink>
           </>
         ) : (
           <>
-            <NavLink to="/login">Log in</NavLink>
+            <NavLink id="link" to="/login">
+              Log in
+            </NavLink>
           </>
         )}
       </nav>
