@@ -24,9 +24,11 @@ export default function Tools() {
 
   return (
     <>
-      <h1 id="title">Tool List</h1>
-      <SearchForm setFilter={setFilter} />
-      <ul id="tools">
+      <div id="titlesearch">
+        <h1 id="title">Tool List</h1>
+        <SearchForm setFilter={setFilter} />
+      </div>
+      <ul class="toolcard">
         {filteredTools.map((tool) => (
           <ToolCard key={tool.id} tool={tool} />
         ))}
@@ -55,18 +57,18 @@ function SearchForm({ setFilter }) {
 
 function ToolCard({ tool }) {
   return (
-    <li className="tool">
-      {/* <figure className="center-children">
+    <li>
+      {/* <figure>
         <img src={tool.image} alt={"Image of " + tool.name} />
       </figure> */}
-      <div>
-        <h2>
-          <Link to={"/tools/" + tool.id}>
+      <Link id="toolname" to={"/tools/" + tool.id}>
+        <div class="toolitems">
+          <h2>
             {tool.series}: {tool.name}
-          </Link>
-        </h2>
-        <p>O-Ring: {tool.oring}</p>
-      </div>
+          </h2>
+          <p>O-Ring: {tool.oring}</p>
+        </div>
+      </Link>
     </li>
   );
 }

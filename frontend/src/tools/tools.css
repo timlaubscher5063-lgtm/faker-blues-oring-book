@@ -7,34 +7,75 @@
 #title {
   font-size: 2rem;
   padding-left: 2rem;
+  align-self: center;
+}
+
+#titlesearch {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 tr {
-  gap: 5ch;
+  gap: 3ch;
 }
 
 th,
 td {
-  border: solid 1px;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   text-align: center;
-  /* display: grid;
-  grid-template-columns: 5rem 5rem;
-  grid-template-rows: 5rem 5rem;
-  gap: 1ch;
-  background: #eee;
-  padding: 0.5rem; */
+}
+td {
+  margin-bottom: 5rem;
+}
+th {
+  margin-top: 2rem;
+  background-color: #dbdada;
+  border-radius: 5px;
 }
 
-li.tool .name {
-  font-weight: bold;
+.toolcard {
+  margin: 0;
+  display: grid;
+
+  color: black;
+
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+
+  text-align: center;
+  padding: 1ch;
+}
+
+.toolitems {
+  margin: 10px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.toolitems > p {
+  margin-top: 0;
+}
+
+#toolname {
+  text-decoration: none;
+  color: black;
 }
 
 #tool {
-  display: table;
-  gap: 15ch;
-  text-align: left;
-  width: 100rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#head,
+#body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 1.25rem;
 }
 
 form {
@@ -61,8 +102,6 @@ select {
 }
 
 input[type="submit"] {
-  width: 100%;
-  background-color: #4caf50;
   color: white;
   padding: 14px;
   margin: 8px 0;
@@ -73,10 +112,6 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
-}
-
-.th {
-  width: 15ch;
 }
 
 @media (width >= 450px) {

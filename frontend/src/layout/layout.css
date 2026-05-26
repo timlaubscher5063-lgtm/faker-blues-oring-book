@@ -5,7 +5,7 @@
   align-items: center;
   padding: 0.25rem 0;
   margin-bottom: 0.5rem;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid rgb(71, 107, 214);
 }
 
 #navbar nav {
@@ -29,6 +29,11 @@
 
 #link {
   text-decoration: none;
+  color: black;
+  padding: 1ch;
+  font-size: 1.25rem;
+  background-color: #f2f2f2;
+  border-radius: 5px;
 }
 
 @media (width <= 400px) {
