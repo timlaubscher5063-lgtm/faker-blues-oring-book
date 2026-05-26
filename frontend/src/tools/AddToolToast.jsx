@@ -1,9 +1,9 @@
 import Toast from "react-bootstrap/Toast";
+import { useState } from "react";
 
 export default function AddToolToast() {
-  console.log("toast called");
   return (
-    <Toast autohide delay={3000}>
+    <Toast delay={3000} autohide>
       <Toast.Header>
         <strong>✓ Success</strong>
       </Toast.Header>

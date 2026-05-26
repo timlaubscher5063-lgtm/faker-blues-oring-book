@@ -46,30 +46,32 @@ export default function AddTool() {
           Name
           <input type="text" name="name" />
         </label>
-        <label>
-          Series
-          <input type="text" name="series" />
-        </label>
-        <label>
-          O-Ring
-          <input type="integer" name="oring" />
-        </label>
-        <label>
-          Connection
-          <input type="text" name="connection" />
-        </label>
-        <label>
-          Length
-          <input type="integer" name="length" />
-        </label>
-        <label>
-          Weight
-          <input type="integer" name="weight" />
-        </label>
-        <label>
-          Voltage
-          <input type="integer" name="voltage" />
-        </label>
+        <div id="addtoolinput">
+          <label>
+            Series
+            <input type="text" name="series" />
+          </label>
+          <label>
+            O-Ring
+            <input type="integer" name="oring" />
+          </label>
+          <label>
+            Connection
+            <input type="text" name="connection" />
+          </label>
+          <label>
+            Length
+            <input type="integer" name="length" />
+          </label>
+          <label>
+            Weight
+            <input type="integer" name="weight" />
+          </label>
+          <label>
+            Voltage
+            <input type="integer" name="voltage" />
+          </label>
+        </div>
         <button>Add Tool</button>
         {AddedTool && <AddToolToast />}
       </form>

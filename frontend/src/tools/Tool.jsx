@@ -23,12 +23,12 @@ export default function Tool() {
   if (!tool) return <p>Loading...</p>;
 
   return (
-    <div id="tool">
-      <section>
+    <div>
+      <section id="tool">
         <h1>{tool.series}</h1>
         <table>
           <thead>
-            <tr>
+            <tr id="head">
               <th>Tool</th>
               <th>O-Ring</th>
               <th>Connection</th>
@@ -38,7 +38,7 @@ export default function Tool() {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr id="body">
               <td>{tool.name}</td>
               <td>{tool.oring}</td>
               <td>{tool.connection}</td>
@@ -48,7 +48,12 @@ export default function Tool() {
             </tr>
           </tbody>
         </table>
-        <DeleteToolButton key={tool.id} id={tool.id} token={token} />
+        <DeleteToolButton
+          id="removebutton"
+          key={tool.id}
+          id={tool.id}
+          token={token}
+        />
       </section>
     </div>
   );
