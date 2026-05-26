@@ -74,7 +74,6 @@ export async function deleteTool(token, id) {
       "Content-Type": "application/json",
       Authorization: "Bearer " + token,
     },
-    //body: JSON.stringify(id),
   });
 
   if (!response.ok) {

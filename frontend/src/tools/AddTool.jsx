@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { addTool } from "../api/tools";
 import { useAuth } from "../auth/AuthContext";
+import AddToolToast from "./AddToolToast";
 import "./tools.css";
 
 export default function AddTool() {
   const { token } = useAuth();
 
   const [error, setError] = useState(null);
+  const [AddedTool, setAddedTool] = useState(false);
 
   const tryAddTool = async (formData) => {
     setError(null);
@@ -29,6 +31,8 @@ export default function AddTool() {
         weight,
         voltage,
       });
+
+      setAddedTool(true);
     } catch (e) {
       setError(e.message);
     }
@@ -36,8 +40,8 @@ export default function AddTool() {
 
   return (
     <>
-      <h2>Add a new tool</h2>
-      <form id="toolAdd" action={tryAddTool}>
+      <h2 id="title">Add a new tool</h2>
+      <form action={tryAddTool}>
         <label>
           Name
           <input type="text" name="name" />
@@ -67,6 +71,7 @@ export default function AddTool() {
           <input type="integer" name="voltage" />
         </label>
         <button>Add Tool</button>
+        {AddedTool && <AddToolToast />}
       </form>
       {error && <p role="alert">{error}</p>}
     </>

@@ -24,7 +24,7 @@ export default function Tools() {
 
   return (
     <>
-      <h1>Tool List</h1>
+      <h1 id="title">Tool List</h1>
       <SearchForm setFilter={setFilter} />
       <ul id="tools">
         {filteredTools.map((tool) => (
@@ -55,7 +55,7 @@ function SearchForm({ setFilter }) {
 
 function ToolCard({ tool }) {
   return (
-    <li className="book">
+    <li className="tool">
       {/* <figure className="center-children">
         <img src={tool.image} alt={"Image of " + tool.name} />
       </figure> */}

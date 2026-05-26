@@ -55,7 +55,6 @@ export default function Tool() {
 }
 
 function DeleteToolButton({ token, id }) {
-  console.log(id);
   const navigate = useNavigate();
   const [error, setError] = useState(null);
   const tryDelete = async () => {
