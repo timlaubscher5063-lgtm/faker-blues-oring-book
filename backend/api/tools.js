@@ -52,7 +52,6 @@ router.param("id", async (req, res, next, id) => {
   const tool = await getToolById(id);
   if (!tool) return res.status(404).send("Tool not found.");
   req.tool = tool;
-  console.log(req.tool);
   next();
 });
 
