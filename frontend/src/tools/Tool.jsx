@@ -42,9 +42,9 @@ export default function Tool() {
               <td>{tool.name}</td>
               <td>{tool.oring}</td>
               <td>{tool.connection}</td>
-              <td>{tool.length}</td>
-              <td>{tool.weight}</td>
-              <td>{tool.voltage}</td>
+              <td>{tool.length} ft</td>
+              <td>{tool.weight} lb</td>
+              <td>{tool.voltage} V</td>
             </tr>
           </tbody>
         </table>

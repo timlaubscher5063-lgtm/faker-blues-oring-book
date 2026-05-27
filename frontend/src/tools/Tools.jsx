@@ -28,7 +28,7 @@ export default function Tools() {
         <h1 id="title">Tool List</h1>
         <SearchForm setFilter={setFilter} />
       </div>
-      <ul class="toolcard">
+      <ul className="toolcard">
         {filteredTools.map((tool) => (
           <ToolCard key={tool.id} tool={tool} />
         ))}
@@ -62,7 +62,7 @@ function ToolCard({ tool }) {
         <img src={tool.image} alt={"Image of " + tool.name} />
       </figure> */}
       <Link id="toolname" to={"/tools/" + tool.id}>
-        <div class="toolitems">
+        <div className="toolitems">
           <h2>
             {tool.series}: {tool.name}
           </h2>

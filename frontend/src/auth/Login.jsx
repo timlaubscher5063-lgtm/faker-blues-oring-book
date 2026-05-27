@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 
 import { useAuth } from "./AuthContext";
+import "./login.css";
 
 export default function Login() {
   const { login } = useAuth();
@@ -23,12 +24,12 @@ export default function Login() {
   return (
     <>
       <h1>Login to O-Ring Book Account</h1>
-      <form action={onLogin}>
-        <label>
+      <form id="user" action={onLogin}>
+        <label className="user">
           Username
           <input type="username" name="username" required />
         </label>
-        <label>
+        <label className="user">
           Password
           <input type="password" name="password" required />
         </label>
